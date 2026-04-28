@@ -1,0 +1,167 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem; /* Compensate for the fixed navbar */
+  padding-bottom: 2rem;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-block {
+  width: max-content;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.line-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.line-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.chebo-text {
+  /* Nessuna traslazione manuale, allineamento puro flexbox */
+}
+
+.line-3 {
+  display: flex;
+}
+
+.m-0 {
+  margin: 0;
+  padding: 0;
+}
+
+.text-huge {
+  font-size: min(7.2rem, 8vw); /* Scalabile, impedisce il wrap e non sborda dal 100vw */
+  letter-spacing: -2px;
+  line-height: 0.9;
+  white-space: nowrap; /* Impedisce che si spezzi su due righe, dettando la larghezza del contenitore! */
+}
+
+.text-jumbo {
+  font-size: 6.8rem; /* Ridotto per non eccedere gli 820px e permettere al justify di allineare a destra */
+  letter-spacing: -1px;
+  line-height: 0.9;
+  width: 100%;
+  text-align: justify;
+  text-align-last: justify;
+  white-space: nowrap;
+}
+
+.outline-text {
+  -webkit-text-stroke: 3px #000;
+  color: transparent;
+}
+
+.text-purple {
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+.method-text {
+  font-size: 1.4rem;
+  letter-spacing: 0px;
+  line-height: 0.9;
+}
+
+.based-text {
+  font-size: 1.4rem;
+  line-height: 0.9;
+  letter-spacing: 0px;
+}
+
+/* Circles */
+.circles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.circle-purple {
+  background-color: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  z-index: 2;
+  transform: translateX(40%); /* Spostato a destra */
+  cursor: pointer;
+  animation: pulseGlow 2s infinite;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.circle-purple:hover {
+  animation: none; /* ferma la pulsazione */
+  transform: translateX(40%) scale(1.1); /* ingrandimento elastico con base a destra */
+  box-shadow: 0 15px 35px rgba(182, 101, 255, 0.6); /* ombra glow */
+  filter: brightness(1.15);
+  z-index: 3;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(182, 101, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(182, 101, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(182, 101, 255, 0);
+  }
+}
+
+.circle-image {
+  background-color: #eee;
+  z-index: 1;
+  transform: translateX(-40%); /* Spostato a sinistra */
+  overflow: hidden;
+}
+
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .row-1 { padding-right: 0; flex-direction: column; align-items: center; text-align: center; }
+  .row-2 { flex-direction: column-reverse; align-items: center; text-align: center; }
+  .align-bottom, .align-top { padding: 0; text-align: center; margin: 10px 0; }
+  
+  .circles-container { height: 350px; flex-direction: column; }
+  .circle { position: relative; transform: none; margin: -20px 0; }
+  
+  .circle-purple:hover {
+    transform: scale(1.1); /* Resetta il translate e ingrandisce solo su mobile */
+  }
+}

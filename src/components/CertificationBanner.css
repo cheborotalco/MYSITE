@@ -1,0 +1,56 @@
+.certification {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-box {
+  max-width: 950px;
+  margin: 0 auto;
+  border: 4px solid #000;
+  border-radius: 30px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background-color: #fff;
+}
+
+.badge {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.pmp-official-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.banner-text h2 {
+  font-family: var(--font-body);
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 800;
+  text-transform: none;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 900px) {
+  .banner-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .banner-text h2 {
+    font-size: 2rem;
+  }
+}

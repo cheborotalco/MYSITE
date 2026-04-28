@@ -1,0 +1,74 @@
+.navbar-wrapper {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* Let clicks pass through the wrapper */
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  box-shadow: 0 10px 40px rgba(182, 101, 255, 0.1);
+  display: inline-flex;
+  pointer-events: auto; /* Re-enable clicks on the navbar itself */
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4b5563;
+  transition: color 0.2s;
+  text-transform: none;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.btn-call {
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(182, 101, 255, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: none;
+}
+
+.btn-call:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(182, 101, 255, 0.6);
+}

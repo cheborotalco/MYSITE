@@ -1,0 +1,30 @@
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Philosophy from './components/Philosophy';
+import CertificationBanner from './components/CertificationBanner';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Philosophy />
+        <CertificationBanner />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  )
+}
+
+export default App;
