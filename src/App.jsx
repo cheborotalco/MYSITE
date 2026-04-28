@@ -8,8 +8,15 @@ import Philosophy from './components/Philosophy';
 import CertificationBanner from './components/CertificationBanner';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ComingSoon from './components/ComingSoon';
 
 function App() {
+  const isWIP = true; // Imposta a false quando vuoi mostrare il sito completo
+
+  if (isWIP) {
+    return <ComingSoon />;
+  }
+
   return (
     <>
       <Navbar />
