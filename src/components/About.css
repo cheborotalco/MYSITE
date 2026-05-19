@@ -1,5 +1,5 @@
 .about-dark-section {
-  background-color: #141414;
+  background-color: #171142;
   color: #ffffff;
   padding: 8rem 0;
   position: relative;
@@ -15,7 +15,8 @@
   font-size: 40vw;
   font-family: var(--font-heading);
   font-weight: 800;
-  color: #1a1a1a;
+  color: transparent;
+  -webkit-text-stroke: 4px rgba(255, 255, 255, 0.05);
   z-index: 0;
   line-height: 0.8;
   pointer-events: none;
@@ -34,6 +35,13 @@
 .about-left {
   flex: 1;
   max-width: 500px;
+  text-align: left;
+}
+
+.about-intro-label,
+.about-main-title,
+.about-quote {
+  margin-left: 0;
 }
 
 .about-intro-label {
@@ -84,10 +92,10 @@
 
 .about-right-card {
   flex: 1;
-  background-color: #222222;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 3.5rem;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .about-description {
@@ -100,7 +108,7 @@
 
 .card-divider {
   height: 1px;
-  background-color: #333333;
+  background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 2.5rem;
 }
 
@@ -137,25 +145,13 @@
   color: #9ca3af;
 }
 
-.read-profile-link {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
 
-.read-profile-link:hover {
-  opacity: 0.8;
-}
 
 @media (max-width: 992px) {
   .about-container {
     flex-direction: column;
   }
+
   .about-left {
     max-width: 100%;
   }
@@ -165,9 +161,11 @@
   .about-right-card {
     padding: 2rem;
   }
+
   .card-two-cols {
     flex-direction: column;
   }
+
   .about-main-title {
     font-size: 4rem;
   }

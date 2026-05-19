@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 5rem; /* Compensate for the fixed navbar */
+  padding-top: 5rem;
+  /* Compensate for the fixed navbar */
   padding-bottom: 2rem;
 }
 
@@ -47,14 +48,17 @@
 }
 
 .text-huge {
-  font-size: min(7.2rem, 8vw); /* Scalabile, impedisce il wrap e non sborda dal 100vw */
+  font-size: min(7.2rem, 8vw);
+  /* Scalabile, impedisce il wrap e non sborda dal 100vw */
   letter-spacing: -2px;
   line-height: 0.9;
-  white-space: nowrap; /* Impedisce che si spezzi su due righe, dettando la larghezza del contenitore! */
+  white-space: nowrap;
+  /* Impedisce che si spezzi su due righe, dettando la larghezza del contenitore! */
 }
 
 .text-jumbo {
-  font-size: 6.8rem; /* Ridotto per non eccedere gli 820px e permettere al justify di allineare a destra */
+  font-size: 6.8rem;
+  /* Ridotto per non eccedere gli 820px e permettere al justify di allineare a destra */
   letter-spacing: -1px;
   line-height: 0.9;
   width: 100%;
@@ -74,6 +78,19 @@
   text-transform: uppercase;
 }
 
+.text-orange {
+  color: #f97316;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+.subtitle-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
 .method-text {
   font-size: 1.4rem;
   letter-spacing: 0px;
@@ -85,6 +102,20 @@
   line-height: 0.9;
   letter-spacing: 0px;
 }
+
+.d-flag-container {
+  position: relative;
+  display: inline-block;
+}
+
+.swiss-flag {
+  display: inline-block;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  vertical-align: text-bottom;
+}
+
+
 
 /* Circles */
 .circles-container {
@@ -114,17 +145,21 @@
   font-size: 1.4rem;
   letter-spacing: 1px;
   z-index: 2;
-  transform: translateX(40%); /* Spostato a destra */
+  transform: translateX(40%);
+  /* Spostato a destra */
   cursor: pointer;
   animation: pulseGlow 2s infinite;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, filter 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .circle-purple:hover {
-  animation: none; /* ferma la pulsazione */
-  transform: translateX(40%) scale(1.1); /* ingrandimento elastico con base a destra */
-  box-shadow: 0 15px 35px rgba(182, 101, 255, 0.6); /* ombra glow */
-  filter: brightness(1.15);
+  animation: none;
+  /* ferma la pulsazione */
+  background-color: #f97316;
+  transform: translateX(40%) scale(1.1);
+  /* ingrandimento elastico con base a destra */
+  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.6);
+  /* ombra glow arancione */
   z-index: 3;
 }
 
@@ -132,9 +167,11 @@
   0% {
     box-shadow: 0 0 0 0 rgba(182, 101, 255, 0.7);
   }
+
   70% {
     box-shadow: 0 0 0 20px rgba(182, 101, 255, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(182, 101, 255, 0);
   }
@@ -143,7 +180,8 @@
 .circle-image {
   background-color: #eee;
   z-index: 1;
-  transform: translateX(-40%); /* Spostato a sinistra */
+  transform: translateX(-40%);
+  /* Spostato a sinistra */
   overflow: hidden;
 }
 
@@ -154,14 +192,39 @@
 }
 
 @media (max-width: 768px) {
-  .row-1 { padding-right: 0; flex-direction: column; align-items: center; text-align: center; }
-  .row-2 { flex-direction: column-reverse; align-items: center; text-align: center; }
-  .align-bottom, .align-top { padding: 0; text-align: center; margin: 10px 0; }
-  
-  .circles-container { height: 350px; flex-direction: column; }
-  .circle { position: relative; transform: none; margin: -20px 0; }
-  
+  .row-1 {
+    padding-right: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .row-2 {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .align-bottom,
+  .align-top {
+    padding: 0;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .circles-container {
+    height: 350px;
+    flex-direction: column;
+  }
+
+  .circle {
+    position: relative;
+    transform: none;
+    margin: -20px 0;
+  }
+
   .circle-purple:hover {
-    transform: scale(1.1); /* Resetta il translate e ingrandisce solo su mobile */
+    transform: scale(1.1);
+    /* Resetta il translate e ingrandisce solo su mobile */
   }
 }

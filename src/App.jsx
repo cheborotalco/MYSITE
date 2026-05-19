@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import SectionDivider from './components/SectionDivider';
 import Projects from './components/Projects';
 import Philosophy from './components/Philosophy';
 import CertificationBanner from './components/CertificationBanner';
@@ -16,7 +17,7 @@ function App() {
   const isSecretPreview = urlParams.get('admin') === 'true'; 
   
   // Il sito è in WIP a meno che non si stia usando la scorciatoia segreta
-  const isWIP = true && !isSecretPreview; 
+  const isWIP = false; 
 
   if (isWIP) {
     return <ComingSoon />;
@@ -29,6 +30,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <SectionDivider />
         <Projects />
         <Philosophy />
         <CertificationBanner />
