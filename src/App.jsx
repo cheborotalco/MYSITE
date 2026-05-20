@@ -14,10 +14,10 @@ import ComingSoon from './components/ComingSoon';
 function App() {
   // Controlla se l'URL contiene il trucco segreto (es: ?admin=true)
   const urlParams = new URLSearchParams(window.location.search);
-  const isSecretPreview = urlParams.get('admin') === 'true'; 
-  
+  const isSecretPreview = urlParams.get('admin') === 'true';
+
   // Il sito è in WIP a meno che non si stia usando la scorciatoia segreta
-  const isWIP = false; 
+  const isWIP = false;
 
   if (isWIP) {
     return <ComingSoon />;
