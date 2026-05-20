@@ -11,6 +11,9 @@ const Footer = () => {
             <p className="copyright">
               &copy; {new Date().getFullYear()} Alisa Chebotarenko. All rights reserved.
             </p>
+            <div className="footer-info">
+              <p className="piva">P.IVA: 01820290086</p>
+            </div>
             <div className="footer-links">
               <a href="#about">About</a>
               <a href="#skills">Competencies</a>

@@ -15,7 +15,6 @@ const Contact = () => {
           <div className="info-main-row">
             <div className="info-text-group">
               <span className="contact-label">LET'S TALK //</span>
-              <h2 className="contact-phone-bold">+39 327 735 7263</h2>
               <a href="mailto:alisa.1chebotarenko@gmail.com" className="contact-email-link">
                 alisa.1chebotarenko@gmail.com
               </a>
@@ -23,9 +22,6 @@ const Contact = () => {
           </div>
 
           <div className="contact-actions-row">
-            <a href="https://wa.me/393277357263" target="_blank" rel="noreferrer" className="circle-btn-elegant">
-              <span>WHATSAPP</span>
-            </a>
             <a href="https://t.me/alisachebotarenko" target="_blank" rel="noreferrer" className="circle-btn-elegant">
               <span>TELEGRAM</span>
             </a>
