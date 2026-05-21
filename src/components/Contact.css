@@ -94,17 +94,44 @@
 .contact-email-link {
   font-family: var(--font-heading);
   font-size: clamp(1.2rem, 2.5vw, 2.2rem);
-  color: #a084e8; /* Soft purple */
+  color: #ffffff; /* White */
   text-decoration: none;
   transition: color 0.3s ease;
   text-transform: uppercase;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   width: 100%;
   text-align: left;
 }
 
 .contact-email-link:hover {
-  color: #ffffff;
+  color: #a084e8; /* Purple on hover */
+}
+
+.contact-email-link:hover .copy-icon {
+  opacity: 1;
+}
+
+.copy-icon {
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.copy-success {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: #a084e8;
+  margin-left: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-email-link:hover .copy-success {
+  opacity: 1;
 }
 
 .contact-actions-row {
