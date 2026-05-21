@@ -19,7 +19,7 @@ const About = () => {
 
         <div className="about-right-card">
           <div className="about-description">
-            <p>I am a 26-year-old Project Manager with a <strong className="text-purple">Computer Science degree</strong> and a <strong className="text-purple">Master in Project Management</strong>, supported by <strong className="text-purple">PMP CERTIFICATION</strong>. My background allows me to combine technical expertise with strategic thinking, organization, and effective execution.</p>
+            <p>I am a 26-year-old IT Project Manager with a <strong className="text-purple">Computer Science degree</strong> and a <strong className="text-purple">Master in Project Management</strong>, supported by <strong className="text-purple">PMP CERTIFICATION</strong>. My background allows me to combine technical expertise with strategic thinking, organization, and effective execution.</p>
             <br />
             <p>I am fluent in Italian, Russian, and English, which helps me work confidently in international and multicultural environments. I am naturally curious, proactive, and motivated by new challenges. I thrive in dynamic settings surrounded by talented people, where collaboration and innovation lead to meaningful results.</p>
             <br />
