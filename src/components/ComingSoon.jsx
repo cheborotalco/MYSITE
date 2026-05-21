@@ -13,7 +13,7 @@ const ComingSoon = () => {
           WORK IN <br />
           <span className="wip-purple">PROGRESS</span>
         </h1>
-        <p className="wip-subtitle">ALISA CHEBOTARENKO • PROJECT MANAGER</p>
+        <p className="wip-subtitle">ALISA CHEBOTARENKO • IT PROJECT MANAGER</p>
       </div>
     </div>
   );
