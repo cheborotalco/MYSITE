@@ -19,7 +19,6 @@ const Footer = () => {
               <a href="#skills">Competencies</a>
               <a href="#projects">Projects</a>
               <a href="#philosophy">Mindset</a>
-              <a href="#certification">Certification</a>
               <a href="#contact">Contact</a>
             </div>
           </div>
