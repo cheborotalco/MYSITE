@@ -16,7 +16,7 @@ function App() {
   const isSecretPreview = urlParams.get('admin') === 'true';
 
   // Il sito è in WIP a meno che non si stia usando la scorciatoia segreta
-  const isWIP = false;
+  const isWIP = !isSecretPreview;
 
   if (isWIP) {
     return <ComingSoon />;
