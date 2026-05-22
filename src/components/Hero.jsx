@@ -45,9 +45,9 @@ const Hero = () => {
         </div>
 
         <div className="circles-container">
-          <div className="circle circle-purple">
+          <a href="#contact" className="circle circle-purple" aria-label="Go to contact section">
             <span>LET'S TALK</span>
-          </div>
+          </a>
           <div className="circle circle-image">
             <img src="/alisa.jpg" alt="Alisa Chebotarenko" />
           </div>
