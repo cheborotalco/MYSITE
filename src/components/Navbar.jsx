@@ -39,36 +39,38 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={`navbar-tech ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
-      <div className="navbar-tech-inner">
-        <a href="#" className="nav-logo-tech" onClick={closeMenu}>
-          ALISA<span className="text-purple">.</span>C
-          <span className="tech-blink">_</span>
-        </a>
-        
-        <nav className="nav-links-tech">
-          {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="nav-link-tech">
-              <span>{item.number}</span> {item.label}
-            </a>
-          ))}
-        </nav>
-        
-        <a href="#contact" className="btn-tech">GET IN TOUCH</a>
+    <>
+      <header className={`navbar-tech ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
+        <div className="navbar-tech-inner">
+          <a href="#" className="nav-logo-tech" onClick={closeMenu}>
+            ALISA<span className="text-purple">.</span>C
+            <span className="tech-blink">_</span>
+          </a>
+          
+          <nav className="nav-links-tech">
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href} className="nav-link-tech">
+                <span>{item.number}</span> {item.label}
+              </a>
+            ))}
+          </nav>
+          
+          <a href="#contact" className="btn-tech">GET IN TOUCH</a>
 
-        <button
-          className="nav-toggle-tech"
-          type="button"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+          <button
+            className="nav-toggle-tech"
+            type="button"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
 
       <nav className="mobile-menu-tech" id="mobile-menu" aria-hidden={!menuOpen}>
         <div className="mobile-menu-inner">
@@ -81,7 +83,7 @@ const Navbar = () => {
           <a href="#contact" className="mobile-btn-tech" onClick={closeMenu}>GET IN TOUCH</a>
         </div>
       </nav>
-    </header>
+    </>
   );
 };
 
