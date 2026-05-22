@@ -23,6 +23,12 @@
   z-index: 1003;
 }
 
+.navbar-tech.menu-open .nav-logo-tech {
+  color: #fff;
+  position: relative;
+  z-index: 1004;
+}
+
 .navbar-tech-inner {
   display: flex;
   justify-content: space-between;
@@ -249,10 +255,6 @@ body.nav-menu-open .navbar-tech {
 
   .nav-toggle-tech {
     display: flex;
-  }
-
-  .navbar-tech.menu-open .nav-logo-tech {
-    color: #fff;
   }
 
   .mobile-menu-inner {
