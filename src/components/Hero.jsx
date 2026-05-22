@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="text-block">
 
           <div className="line-1">
-            <h1 className="text-huge m-0" style={{ transform: 'translateX(calc(var(--scroll, 0) * -0.6px))', transition: 'transform 0.1s ease-out' }}>ALISA</h1>
+            <h1 className="text-huge hero-word hero-word-alisa m-0" data-text="ALISA" style={{ transform: 'translateX(calc(var(--scroll, 0) * -0.6px))', transition: 'transform 0.1s ease-out' }}>ALISA</h1>
             <div className="subtitle-group">
               <span className="text-purple method-text">Italian, English & Russian speaking</span>
               <span className="text-orange method-text">Tech background.</span>
@@ -35,11 +35,11 @@ const Hero = () => {
 
           <div className="line-2">
             <span className="text-purple based-text">Remote-friendly.<br />Often on the move.</span>
-            <h1 className="text-huge m-0 chebo-text" style={{ transform: 'translateX(calc(var(--scroll, 0) * 0.6px))', transition: 'transform 0.1s ease-out' }}>CHEBOTARENKO</h1>
+            <h1 className="text-huge hero-word hero-word-chebo m-0 chebo-text" data-text="CHEBOTARENKO" style={{ transform: 'translateX(calc(var(--scroll, 0) * 0.6px))', transition: 'transform 0.1s ease-out' }}>CHEBOTARENKO</h1>
           </div>
 
           <div className="line-3">
-            <h1 className="text-huge outline-text m-0">PROJECT MANAGER</h1>
+            <h1 className="text-huge hero-word hero-word-role outline-text m-0" data-text="PROJECT MANAGER">PROJECT MANAGER</h1>
           </div>
 
         </div>
