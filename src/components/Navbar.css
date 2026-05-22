@@ -25,6 +25,8 @@
   align-items: center;
   max-width: 1150px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1002;
 }
 
 /* LOGO */
@@ -151,9 +153,155 @@
   border-color: #f97316;
 }
 
+.nav-toggle-tech {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(182, 101, 255, 0.45);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.78);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08);
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-toggle-tech span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #111;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.navbar-tech.scrolled .nav-toggle-tech,
+.navbar-tech.menu-open .nav-toggle-tech {
+  background: rgba(23, 17, 66, 0.92);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.navbar-tech.scrolled .nav-toggle-tech span,
+.navbar-tech.menu-open .nav-toggle-tech span {
+  background-color: #fff;
+}
+
+.navbar-tech.menu-open .nav-toggle-tech span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-tech.menu-open .nav-toggle-tech span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-tech.menu-open .nav-toggle-tech span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu-tech {
+  display: none;
+}
+
+body.nav-menu-open {
+  overflow: hidden;
+}
+
 @media (max-width: 1100px) {
   .nav-links-tech {
     display: none;
+  }
+
+  .btn-tech {
+    display: none;
+  }
+
+  .nav-toggle-tech {
+    display: flex;
+  }
+
+  .mobile-menu-tech {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    background:
+      linear-gradient(135deg, rgba(23, 17, 66, 0.98), rgba(17, 17, 17, 0.98)),
+      var(--color-dark);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  }
+
+  .navbar-tech.menu-open .mobile-menu-tech {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar-tech.menu-open .nav-logo-tech {
+    color: #fff;
+  }
+
+  .mobile-menu-inner {
+    min-height: 100svh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.25rem;
+    width: min(100%, 430px);
+    margin: 0 auto;
+    padding: 5.5rem 1.25rem 2rem;
+  }
+
+  .mobile-nav-link-tech {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    font-family: var(--font-heading);
+    font-size: clamp(2.1rem, 10vw, 3.4rem);
+    font-weight: 900;
+    line-height: 0.95;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .mobile-nav-link-tech span {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+  }
+
+  .mobile-btn-tech {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 56px;
+    margin-top: 2rem;
+    border-radius: 50px;
+    background: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 12px 30px rgba(182, 101, 255, 0.28);
   }
   
   .navbar-tech {
@@ -162,5 +310,28 @@
 
   .navbar-tech.scrolled {
     padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-tech {
+    padding: 1rem 1rem;
+  }
+
+  .navbar-tech.scrolled {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-logo-tech {
+    font-size: 1.25rem;
+  }
+
+  .nav-toggle-tech {
+    width: 42px;
+    height: 42px;
+  }
+
+  .mobile-nav-link-tech {
+    font-size: clamp(2.1rem, 10vw, 3.4rem);
   }
 }

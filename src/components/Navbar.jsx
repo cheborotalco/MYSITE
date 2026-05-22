@@ -3,6 +3,14 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navItems = [
+    { number: '01.', label: 'About', href: '#about' },
+    { number: '02.', label: 'Competencies', href: '#skills' },
+    { number: '03.', label: 'Experience', href: '#projects' },
+    { number: '04.', label: 'Mindset', href: '#philosophy' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,24 +20,67 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('nav-menu-open', menuOpen);
+    return () => document.body.classList.remove('nav-menu-open');
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, []);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <header className={`navbar-tech ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`navbar-tech ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
       <div className="navbar-tech-inner">
-        <a href="#" className="nav-logo-tech">
+        <a href="#" className="nav-logo-tech" onClick={closeMenu}>
           ALISA<span className="text-purple">.</span>C
           <span className="tech-blink">_</span>
         </a>
         
         <nav className="nav-links-tech">
-          <a href="#about" className="nav-link-tech"><span>01.</span> About</a>
-          <a href="#skills" className="nav-link-tech"><span>02.</span> Competencies</a>
-          <a href="#projects" className="nav-link-tech"><span>03.</span> Projects</a>
-          <a href="#philosophy" className="nav-link-tech"><span>04.</span> Mindset</a>
-          <a href="#certification" className="nav-link-tech"><span>05.</span> Certification</a>
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} className="nav-link-tech">
+              <span>{item.number}</span> {item.label}
+            </a>
+          ))}
         </nav>
         
         <a href="#contact" className="btn-tech">GET IN TOUCH</a>
+
+        <button
+          className="nav-toggle-tech"
+          type="button"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
+
+      <nav className="mobile-menu-tech" id="mobile-menu" aria-hidden={!menuOpen}>
+        <div className="mobile-menu-inner">
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} className="mobile-nav-link-tech" onClick={closeMenu}>
+              <span>{item.number}</span>
+              {item.label}
+            </a>
+          ))}
+          <a href="#contact" className="mobile-btn-tech" onClick={closeMenu}>GET IN TOUCH</a>
+        </div>
+      </nav>
     </header>
   );
 };
