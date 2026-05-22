@@ -169,14 +169,14 @@
   height: 46px;
   border: 1px solid rgba(182, 101, 255, 0.45);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.78);
+  background: #171142;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
   padding: 0;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08);
+  box-shadow: 0 8px 24px rgba(23, 17, 66, 0.18);
   transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
@@ -184,20 +184,27 @@
   display: block;
   width: 18px;
   height: 2px;
-  background-color: #111;
+  background-color: #fff;
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.25s ease;
 }
 
-.navbar-tech.scrolled .nav-toggle-tech,
-.navbar-tech.menu-open .nav-toggle-tech {
-  background: rgba(23, 17, 66, 0.92);
+.navbar-tech.scrolled .nav-toggle-tech {
+  background: #171142;
   border-color: rgba(255, 255, 255, 0.22);
 }
 
-.navbar-tech.scrolled .nav-toggle-tech span,
-.navbar-tech.menu-open .nav-toggle-tech span {
+.navbar-tech.scrolled .nav-toggle-tech span {
   background-color: #fff;
+}
+
+.navbar-tech.menu-open .nav-toggle-tech {
+  background: #fff;
+  border-color: rgba(23, 17, 66, 0.18);
+}
+
+.navbar-tech.menu-open .nav-toggle-tech span {
+  background-color: #171142;
 }
 
 .navbar-tech.menu-open .nav-toggle-tech span:nth-child(1) {
