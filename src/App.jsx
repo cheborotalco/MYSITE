@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import SectionDivider from './components/SectionDivider';
 import Projects from './components/Projects';
 import Philosophy from './components/Philosophy';
+import CertificationBanner from './components/CertificationBanner';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ComingSoon from './components/ComingSoon';
@@ -32,6 +33,7 @@ function App() {
         <SectionDivider />
         <Projects />
         <Philosophy />
+        <CertificationBanner />
         <Contact />
       </main>
       <Footer />

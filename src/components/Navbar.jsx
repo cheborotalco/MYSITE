@@ -25,6 +25,7 @@ const Navbar = () => {
           <a href="#skills" className="nav-link-tech"><span>02.</span> Competencies</a>
           <a href="#projects" className="nav-link-tech"><span>03.</span> Projects</a>
           <a href="#philosophy" className="nav-link-tech"><span>04.</span> Mindset</a>
+          <a href="#certification" className="nav-link-tech"><span>05.</span> Certification</a>
         </nav>
         
         <a href="#contact" className="btn-tech">GET IN TOUCH</a>

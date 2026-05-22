@@ -26,6 +26,28 @@ const CertificationBanner = () => {
             </div>
           </div>
         </div>
+
+        <div className="cert-elegant-card">
+          <div className="cert-watermark cert-watermark-center" style={{ fontSize: '9.5rem' }}>CERTIFICATION</div>
+
+          <div className="cert-content-wrapper">
+            <div className="cert-logo-container">
+              <img src="/pmp-logo.png" alt="PMP® Certification" className="cert-official-logo" />
+            </div>
+
+            <div className="cert-text-container">
+              <span className="cert-label">CERTIFICATION //</span>
+              <h2 className="cert-elegant-title">
+                PMP® CERTIFIED<br />
+                <span className="text-purple">PROJECT MANAGER</span>
+              </h2>
+              <p className="cert-elegant-desc">
+                I am officially <strong>PMP® Certified</strong> by the Project Management Institute.
+                Structure saves projects, because improvisation always has a cost.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
