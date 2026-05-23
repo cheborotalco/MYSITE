@@ -251,54 +251,81 @@
 }
 
 .circle-purple {
+  width: 230px;
+  height: 76px;
+  border-radius: 999px;
   background:
-    linear-gradient(135deg, #b665ff 0%, #8b3de2 100%);
+    linear-gradient(135deg, #171142 0%, #5f2bbd 58%, #b665ff 100%);
   color: #fff;
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.18rem;
   font-weight: 600;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.8px;
   text-decoration: none;
   z-index: 2;
-  transform: translateX(40%);
+  transform: translateX(32%);
   /* Spostato a destra */
   cursor: pointer;
   opacity: 0;
   animation: circlePurpleBoot 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1s forwards;
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.75);
   box-shadow:
-    0 18px 42px rgba(139, 61, 226, 0.34),
-    0 0 0 8px rgba(182, 101, 255, 0.12);
-  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    0 18px 42px rgba(23, 17, 66, 0.24),
+    0 0 0 7px rgba(182, 101, 255, 0.1);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
 .circle-purple span {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
-.circle-purple::after {
+.circle-purple span::after {
+  content: '>';
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 50%;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.circle-purple::before {
   content: '';
   position: absolute;
-  inset: 14px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  pointer-events: none;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.22) 42%, transparent 58%);
+  transform: translateX(-115%);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .circle-purple:hover {
   animation: none;
   /* ferma la pulsazione */
   opacity: 1;
-  background:
-    linear-gradient(135deg, #9a4fe8 0%, #f97316 100%);
-  transform: translateX(40%) scale(1.06);
+  transform: translateX(32%) translateY(-3px);
   /* ingrandimento elastico con base a destra */
   box-shadow:
-    0 22px 48px rgba(154, 79, 232, 0.42),
-    0 0 0 10px rgba(249, 115, 22, 0.14);
+    0 24px 52px rgba(95, 43, 189, 0.32),
+    0 0 0 9px rgba(249, 115, 22, 0.11);
   /* ombra glow arancione */
   z-index: 3;
+}
+
+.circle-purple:hover::before {
+  transform: translateX(115%);
+}
+
+.circle-purple:active {
+  transform: translateX(32%) translateY(0);
 }
 
 .circle-purple:focus-visible {
@@ -410,13 +437,13 @@
 @keyframes circlePurpleBoot {
   0% {
     opacity: 0;
-    transform: translateX(40%) scale(0.65);
+    transform: translateX(32%) scale(0.82);
     filter: blur(8px);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(40%) scale(1);
+    transform: translateX(32%) scale(1);
     filter: blur(0);
   }
 }
@@ -580,16 +607,32 @@
   }
 
   .circle-purple {
-    left: calc(50% - 8px);
-    font-size: 1rem;
-    letter-spacing: 1.1px;
+    left: calc(50% - 12px);
+    width: 174px;
+    height: 58px;
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
     transform: none;
     animation-name: circleMobileBoot;
   }
 
+  .circle-purple span {
+    gap: 0.45rem;
+  }
+
+  .circle-purple span::after {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+
   .circle-purple:hover {
     opacity: 1;
-    transform: scale(1.04);
+    transform: translateY(-2px);
+  }
+
+  .circle-purple:active {
+    transform: translateY(0);
   }
 }
 
