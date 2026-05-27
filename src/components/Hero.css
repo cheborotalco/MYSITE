@@ -267,6 +267,7 @@
   transform: none;
   cursor: pointer;
   opacity: 1;
+  animation: circlePurpleBoot 0.78s cubic-bezier(0.16, 1, 0.3, 1) 1.05s both;
   border: 1px solid rgba(255, 255, 255, 0.75);
   box-shadow:
     0 18px 42px rgba(23, 17, 66, 0.24),
@@ -307,7 +308,6 @@
 }
 
 .circle-purple:hover {
-  animation: none;
   opacity: 1;
   transform: translateY(-3px);
   box-shadow:
@@ -433,13 +433,18 @@
 @keyframes circlePurpleBoot {
   0% {
     opacity: 1;
-    transform: scale(0.82);
+    clip-path: inset(0 100% 0 0 round 999px);
     filter: blur(8px);
+  }
+
+  62% {
+    clip-path: inset(0 0 0 0 round 999px);
+    filter: blur(0);
   }
 
   100% {
     opacity: 1;
-    transform: scale(1);
+    clip-path: inset(0 0 0 0 round 999px);
     filter: blur(0);
   }
 }
