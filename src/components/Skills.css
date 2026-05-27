@@ -147,8 +147,9 @@
 
   .card-number {
     position: absolute;
-    top: 1.75rem;
-    left: 1.75rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 0.9rem;
     margin-bottom: 0;
   }
