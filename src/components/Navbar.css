@@ -169,7 +169,7 @@
   height: 46px;
   border: 1px solid rgba(182, 101, 255, 0.45);
   border-radius: 50%;
-  background: #171142;
+  background: linear-gradient(135deg, #171142 0%, #5f2bbd 58%, #b665ff 100%);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -177,7 +177,7 @@
   padding: 0;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(23, 17, 66, 0.18);
-  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .nav-toggle-tech span {
@@ -190,7 +190,7 @@
 }
 
 .navbar-tech.scrolled .nav-toggle-tech {
-  background: #171142;
+  background: linear-gradient(135deg, #171142 0%, #5f2bbd 58%, #b665ff 100%);
   border-color: rgba(255, 255, 255, 0.22);
 }
 
