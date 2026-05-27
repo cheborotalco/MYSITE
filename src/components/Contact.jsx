@@ -47,10 +47,10 @@ const Contact = () => {
           </div>
 
           <div className="contact-actions-row">
-            <a href="https://t.me/alisachebotarenko" target="_blank" rel="noreferrer" className="circle-btn-elegant">
+            <a href="https://t.me/alichebo" target="_blank" rel="noreferrer" className="circle-btn-elegant">
               <span>TELEGRAM</span>
             </a>
-            <a href="https://linkedin.com/in/alisachebotarenko" target="_blank" rel="noreferrer" className="circle-btn-elegant">
+            <a href="https://www.linkedin.com/in/alisachebotarenko" target="_blank" rel="noreferrer" className="circle-btn-elegant">
               <span>LINKEDIN</span>
             </a>
           </div>
