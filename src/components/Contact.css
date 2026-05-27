@@ -45,6 +45,10 @@
   text-transform: uppercase;
 }
 
+.contact-dark-section .text-huge {
+  font-size: 6rem;
+}
+
 .outline-text-light {
   color: transparent;
   -webkit-text-stroke: 2px #ffffff;
@@ -190,6 +194,10 @@
   .contact-watermark {
     font-size: 12rem;
     bottom: -2%;
+  }
+
+  .contact-dark-section .text-huge {
+    font-size: 4rem;
   }
 }
 

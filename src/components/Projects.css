@@ -4,9 +4,13 @@
 }
 
 .projects .section-title {
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  line-height: 0.9;
   text-align: center;
   margin-bottom: 3rem;
   color: var(--color-text);
+  text-transform: uppercase;
 }
 
 .projects-grid {
@@ -122,6 +126,12 @@
 @media (max-width: 768px) {
   .projects {
     padding: 3rem 0;
+  }
+
+  .projects .section-title {
+    font-size: 4rem;
+    text-align: left;
+    padding: 0 1.5rem;
   }
 
   .projects-grid {

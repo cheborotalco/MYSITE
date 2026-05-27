@@ -47,7 +47,7 @@
 
 .manifesto-huge {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 7vw, 7rem);
+  font-size: 6rem;
   line-height: 0.9;
   text-transform: uppercase;
   margin-bottom: 3rem;
@@ -72,7 +72,7 @@
   align-items: center;
   gap: 1.5rem;
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: 6rem;
   line-height: 1;
   margin-bottom: 6rem;
 }
@@ -139,6 +139,11 @@
   .philosophy-watermark {
     font-size: 10rem;
     top: 5%;
+  }
+
+  .manifesto-huge,
+  .manifesto-aligning {
+    font-size: 4rem;
   }
 
   .manifesto-aligning {
