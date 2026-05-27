@@ -146,14 +146,19 @@
   }
 
   .card-number {
+    position: absolute;
+    top: 1.75rem;
+    left: 1.75rem;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 
   .card-skill-name {
     font-size: 1.85rem;
     line-height: 1.05;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .card-watermark {
