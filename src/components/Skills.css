@@ -141,6 +141,8 @@
     height: auto;
     min-height: 150px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .card-number {
@@ -151,6 +153,7 @@
   .card-skill-name {
     font-size: 1.85rem;
     line-height: 1.05;
+    text-align: center;
   }
 
   .card-watermark {
