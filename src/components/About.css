@@ -157,6 +157,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .about-main-title {
+    font-size: 51px;
+  }
+}
+
 @media (max-width: 576px) {
   .about-right-card {
     padding: 2rem;
@@ -167,6 +173,6 @@
   }
 
   .about-main-title {
-    font-size: 4rem;
+    font-size: 51px;
   }
 }
