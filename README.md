@@ -1,16 +1,57 @@
-# React + Vite
+# Alisa Chebotarenko Consulting Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional multilingual (IT/RU/EN) multi-page consulting website built with **Next.js + React + TypeScript + Tailwind CSS**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Brutalist-Tech / Editorial Modern style based on `design_reference.md`
+- Multi-page architecture:
+  - Home
+  - About
+  - Services
+  - Cases / Portfolio
+  - Blog
+  - Contact
+  - Booking
+- Language switcher (IT / RU / EN) with persisted preference (`NEXT_LOCALE` cookie + localStorage)
+- Stripe Checkout integration (`/api/stripe/checkout`)
+- Interactive consultation booking calendar (react-day-picker)
+- Conversion optimization blocks:
+  - CTA on every page
+  - Testimonials
+  - Trust badges
+  - Lead magnet form
+  - Exit-intent popup
+  - FAQ progressive disclosure
+- SEO:
+  - Localized metadata / OpenGraph / Twitter
+  - `sitemap.xml` and `robots.txt`
+- Google Analytics integration (`NEXT_PUBLIC_GA_ID`)
+- Database layer with Prisma + SQLite for:
+  - Leads
+  - Bookings
+  - Lead magnet submissions
 
-## React Compiler
+## Local setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+cp .env.example .env
+npm run prisma:generate
+npm run prisma:push
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `npm run dev` – start dev server
+- `npm run build` – production build
+- `npm run start` – production server
+- `npm run lint` – lint check
+- `npm run prisma:generate` – generate Prisma client
+- `npm run prisma:push` – sync schema to local SQLite DB
+
+## Notes
+
+- Stripe keys are intentionally environment-based and can be configured later.
+- Google Analytics is enabled only when `NEXT_PUBLIC_GA_ID` is set.

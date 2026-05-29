@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  company   String?
+  message   String
+  locale    String
+  source    String?
+  createdAt DateTime @default(now())
+}
+
+model Booking {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  company   String?
+  notes     String?
+  service   String
+  date      String
+  time      String
+  locale    String
+  status    BookingStatus @default(PENDING)
+  createdAt DateTime      @default(now())
+}
+
+model LeadMagnet {
+  id        String   @id @default(cuid())
+  email     String
+  name      String?
+  locale    String
+  createdAt DateTime @default(now())
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELED
+}
